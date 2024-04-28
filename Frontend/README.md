@@ -2,4 +2,4 @@ This is a React + Vite project for a Food App/Website that intergrates Stripe as
 
 DB used: MongoDB
 
-Auth: Mongo DB && LN Auth
+Auth: Mongo DB && LN Auth.
