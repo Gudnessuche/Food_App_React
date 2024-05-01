@@ -1,25 +1,31 @@
 import { log } from "console";
 import foodModel from "../models/foodModel.js";
 import fs from 'fs'
+import express from 'express'
 
 
 // add food item
 
 const addFood = async (req,res) => {
 
-    let image_filename = `${req.file.filename}`;
-    const food = new foodModel({
-        name:req.body.name,
-        description:req.body.description,
-        price:req.body.price,
-        category:req.body.category,
-        image:image_filename
-    })
+    // console.log("request", req)
+    console.log("req.file", req.file)
     try {
+        // console.log("request", req)
+        let image_filename = `${req.file.filename}`;
+        console.log("req.file",req.file)
+        const food = new foodModel({
+            name:req.body.name,
+            description:req.body.description,
+            price:req.body.price,
+            category:req.body.category,
+            image:image_filename
+        })
+
         await food.save();
         res.json({success:true,message:"Food Added"})
     } catch (error) {
-        console.log(error)
+        console.log("Error from add food",error)
         res.json({success:false,message:"Error"})
     }
 }
