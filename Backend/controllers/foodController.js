@@ -11,7 +11,7 @@ const addFood = async (req,res) => {
     // console.log("request", req)
     console.log("req.file", req.file)
     try {
-        // console.log("request", req)
+    
         let image_filename = `${req.file.filename}`;
         console.log("req.file",req.file)
         const food = new foodModel({
