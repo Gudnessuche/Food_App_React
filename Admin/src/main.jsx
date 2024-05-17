@@ -5,7 +5,7 @@ import './index.css'
 import {BrowserRouter} from "react-router-dom"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/https://github.com/Gudnessuche/Food_App_React.git">
     <App />
   </BrowserRouter>
 )

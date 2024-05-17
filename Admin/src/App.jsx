@@ -7,8 +7,15 @@ import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from 'react'
 
 const App = () => {
+
+  useEffect(() => {
+    // Get the current full URL
+    const currentUrl = window.location.href;
+    console.log('Current URL:', currentUrl);
+  }, []);
 
   const url = "http://localhost:4000"
 
