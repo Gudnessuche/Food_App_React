@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import StoreContextProvider from './context/StoreContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/https://github.com/Gudnessuche/Food_App_React.git">
     <StoreContextProvider>
       <App />
     </StoreContextProvider>

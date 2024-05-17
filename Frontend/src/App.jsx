@@ -6,8 +6,15 @@ import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
+import { useEffect } from 'react'
 
 const App = () => {
+
+  useEffect(() => {
+    // Get the current full URL
+    const currentUrl = window.location.href;
+    console.log('Current URL:', currentUrl);
+  }, []);
 
   const [showLogin,setShowLogin] = useState(false)
 
